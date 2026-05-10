@@ -1,7 +1,8 @@
 package main
 
 // import "fmt"
-import "github.com/Rishu-89/Go_Concept/dynamicArray"
+// import "github.com/Rishu-89/Go_Concept/dynamicArray"
+import "github.com/Rishu-89/Go_Concept/structTypeArray"
 
 func main() {
 	prices := [6]float64{10.23, 21.7,5,6}
@@ -21,6 +22,7 @@ func main() {
 	// fmt.Println(len(featuredPrice),cap(featuredPrice))  // output 3 4
 	// 													// slice always remembar the last not first
 
-	dynamicArray.DynamicArray();
+	// dynamicArray.DynamicArray();
+	structTypeArray.StructArray();
 
 }
