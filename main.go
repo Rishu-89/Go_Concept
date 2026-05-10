@@ -29,19 +29,61 @@
 // 	fmt.Println(prices)
 // }
 
+// package main
+
+// import "fmt"
+
+// func main(){
+// 	website:=map[string]string{
+// 		"Google":"https://googe.com",
+// 		"Amazon web services":"https://aws.com",
+// 	}
+// 	fmt.Println(website)
+// 	fmt.Println(website["Amazon web services"])
+// 	website["linkedin"]="https://linked.com"
+// 	fmt.Println(website)
+// 	delete(website,"Google")
+// 	fmt.Println(website)
+// }
+
 package main
 
 import "fmt"
 
+type floatMap map[string]float64
+
+func (m floatMap) output(){
+	fmt.Println(m)
+}
+
 func main(){
-	website:=map[string]string{
-		"Google":"https://googe.com",
-		"Amazon web services":"https://aws.com",
+	userName:=make([]string,2,5)     //2->how many element space want to leave before allocating 5 element  5-> allocate length at starting if add more then five that is possible
+	fmt.Println(userName)
+	userName[0]="rishu"
+	userName=append(userName, "Max")
+	userName=append(userName, "Manuel")
+	fmt.Println(userName)
+
+	courseRatting:=make(floatMap,3) // 3 preDefined size only for optimization
+	courseRatting["go"]=3.4
+	courseRatting["react"]=4.8
+	courseRatting["angular"]=4.3
+	courseRatting["JavaScript"]=3.9
+	// fmt.Println(courseRatting)
+	courseRatting.output()
+
+	for i,value :=range userName{
+		fmt.Println("Index:",i)
+		fmt.Println("value:",value)
 	}
-	fmt.Println(website)
-	fmt.Println(website["Amazon web services"])
-	website["linkedin"]="https://linked.com"
-	fmt.Println(website)
-	delete(website,"Google")
-	fmt.Println(website)
+
+	// for _,value :=range userName{
+	// 	// fmt.Println("Index:",i)
+	// 	fmt.Println("value:",value)
+	// }
+
+	for key,value:=range courseRatting{
+		fmt.Println("key:",key)
+		fmt.Println("value:",value)
+	} 
 }
